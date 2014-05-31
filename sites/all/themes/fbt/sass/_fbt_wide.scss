@@ -1,0 +1,66 @@
+@media all and (min-width: 956px)  {
+  body{
+    overflow-x:hidden;
+  }
+  #slide-wrap{
+    display:block;
+  }
+  #views_slideshow_cycle_main_homepage_slideshow-block,
+  #views_slideshow_cycle_teaser_section_homepage_slideshow-block{
+    width:1425px !important;
+    height:506px !important;
+    display:block;
+    clear:both;
+  }
+  #logo-container{
+    position:relative;
+    margin: 0 auto;
+    width: 960px;
+    .header__logo {
+      display:block;
+      left:345px;
+    }
+  }
+  #above-top{
+    #at-wrap{
+      display:block;
+    }
+  }
+  #top{
+    background: image-url('theme/nav_bg.jpg') repeat-x top;
+    height:61px;
+    nav#main-menu{
+      li{
+	background:none;
+	float:left;
+	padding: 9px 0 10px 0;
+	&.menu-379,&.menu-390{
+	  padding-right:20px;
+	  border-right:1px solid #42A4C3;
+	}
+	&.menu-380,&.menu-389{
+	  padding-left:20px;
+	  padding-right:20px;
+	  border-right:1px solid #42A4C3;
+	}
+	&.menu-381,&.menu-388{
+	  padding-left:20px;
+	  padding-right:0;
+	}
+	&.menu-382,&.menu-391{
+	  margin-left:270px;
+	  padding-right:0;
+	}
+	&.menu-383,&.menu-387,&.menu-548{
+	  margin-left:20px;
+	  padding-left:20px;
+	  border-left:1px solid #42A4C3;
+	}
+      }
+    }
+  }
+
+  .view-beach-photo-gallery td{
+    display:table-cell;
+  }
+}

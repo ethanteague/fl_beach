@@ -1,0 +1,101 @@
+#slide-wrap{
+    position:relative;
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    left:-234px;
+    top:10px;
+    .region-highlighted{
+	position:relative;
+    }
+    #slide-frame{
+	position:absolute;
+	width:1425px;
+	z-index:5;
+	top:10px;
+	img{
+	    width:1425px;
+	}
+    }
+    .view-id-homepage_slideshow{
+	position:relative;
+	width:1500px;
+	top:20px;
+	img{
+	    max-width:100%;
+	}
+	.views-slideshow-controls-top{
+	    position:absolute;
+	    top:200px;
+	    width:1520px;
+	    left:-47px;
+	    #views_slideshow_controls_text_pause_homepage_slideshow-block{
+		display:none;
+	    }
+	    #views_slideshow_controls_text_previous_homepage_slideshow-block{
+		display:block;
+		position:absolute;
+		left:0;
+		z-index:6;
+		a{
+		    display:block;
+		    text-indent:-99999px;
+		    background:image-url('theme/left_arrow.png') no-repeat;
+		    height:68px;
+		    width:40px;
+		}
+	    }
+	    #views_slideshow_controls_text_next_homepage_slideshow-block{
+		display:block;
+		position:absolute;
+		right:0;
+		z-index:6;
+		a{
+		    display:block;
+		    text-indent:-99999px;
+		    background:image-url('theme/right_arrow.png') no-repeat;
+		    height:68px;
+		    width:40px;
+		}
+	    }
+	}
+	#views_slideshow_cycle_teaser_section_homepage_slideshow-block{
+	    position:relative;
+	    .views-slideshow-cycle-main-frame-row.views_slideshow_cycle_slide.views_slideshow_slide{
+		// Views slideshow adds z-index to slides = a problem for the home page cta box.
+		z-index:inherit !important;
+	    }
+	    .views-field-field-link{
+		z-index:10;
+		display:block;
+		position:absolute;
+		right:320px;
+		bottom:85px;
+		.cta-wrap{
+		    background:rgba(14, 117, 156, 0.8);
+		    border-radius:5px;
+		    padding:5px;
+		    max-width:450px;
+		    h3{
+			line-height:65px;
+			padding:0;
+			margin:0;
+			color:#fff;
+			font-size:65px;
+			font-weight:bold;
+		    }
+		    .place-body{
+			color:#fff;
+			font-size:28px;
+		    }
+		    a.place-link{
+			color:#fff9ca;
+			&:hover{
+			    color:#f8e971;
+			}
+		    }
+		}
+	    }
+	}
+    }
+}

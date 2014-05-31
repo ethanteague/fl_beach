@@ -1,0 +1,31 @@
+.art_prof{
+    #map-wrap{
+	width:320px;
+	margin:0 auto;
+    }
+    .verified{
+	margin:0 auto;
+	width:190px;
+	display:block;
+    }
+    a{
+	text-decoration:none;
+	color:#0176a1;
+	&:hover{
+	    text-decoration:underline;
+	}
+    }
+    @media all and (min-width: 956px)  {
+	#map-wrap{
+	    float: left;
+	    margin-left: 15px;
+	}
+	#left-wrap{
+	    float:left;
+	    width:50%;
+	    padding-right:10px;
+	    margin-right:10px;
+	    border-right:1px dashed #E0C89E;
+	}
+    }
+}

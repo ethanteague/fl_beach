@@ -1,0 +1,149 @@
+h5{
+    font-size:18px;
+    line-height:22px;
+    margin:0
+}
+.view-related-content{
+    .views-row{
+	border:thin solid #E0C89E;
+	display:block;
+	clear:both;
+	padding:5px;
+	margin-top:5px;
+	.views-field-field-related-images{
+
+	}
+    }
+}
+#right-wrap{
+    padding:10px;
+    text-align:center;
+}
+
+.page-taxonomy-term-276 #map-wrap {
+  clear:both;
+}
+
+.view-display-id-block_1 {
+  text-align:center;
+    .views-row {
+      margin:10px;
+      display:inline-block;
+    }
+  }
+
+@media all and (min-width: 956px)  {
+  .view-display-id-block_1 {
+    .views-row {
+      //width:25%;
+      float:left;
+    }
+  }
+    .view-related-content{
+	.views-row{
+	    height:100px;
+	    .views-field-body,
+	    .views-field-view-node{
+		float:left;
+		max-width:60%;
+	    }
+	    .views-field-field-related-images{
+		float:right;
+		position:Relative;
+		top:-15px;
+	    }
+	}
+    }
+}
+.view-all-listings{
+    .views-submit-button{
+
+    }
+    select{
+	height:35px;
+    }
+    input{
+	height:32px;
+    }
+    .views-row{
+	border-bottom:thin dashed #E0c89e;
+	min-height:150px;
+	padding:10px 0;
+	display:block;
+	h4{
+	    margin:0;
+	    font-size:16px;
+	}
+	.views-field-field-related-images{
+	    float:left;
+	    margin:0 10px 15px 0;
+	}
+    }
+
+}
+
+.view-all-areas{
+    table{
+	h4{
+	    margin:5px 0;
+	}
+	width:100%;
+	td{
+	    width:25%;
+	}
+    }
+}
+@media all and (max-width: 680px) {
+    .view-all-areas{
+	table{
+	    td{
+		width:100%;
+		clear:both;
+		display:block
+	    }
+	}
+    }
+}
+.section-area{
+    article{
+	padding:5px 0;
+	margin:5px 0;
+	border-bottom:dashed 1px #E0C89E;
+	&.node-teaser{
+	    p{
+		margin:0;
+	    }
+	}
+    }
+}
+#all-footer{
+    h3{
+	display:inline;
+	font-size:16px;
+	a{
+	    text-decoration:none;
+	    &:hover{
+		text-decoration:underline;
+	    }
+	}
+    }
+}
+.view-featured-sponsors{
+    article{
+	padding:5px 0;
+	margin:5px 0;
+	border-bottom:dashed 1px #E0C89E;
+	.field-type-text-with-summary{
+	    p{
+		margin:0;
+	    }
+	}
+	a{
+	    font-weight:bold;
+	    text-decoration:none;
+	    &:hover{
+		text-decoration:underline;
+	    }
+	}
+    }
+}

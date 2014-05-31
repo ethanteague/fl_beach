@@ -1,0 +1,131 @@
+.field-name-field-callout-box-top,
+.field-name-field-callout-box-bottom{
+  width:100%;
+}
+
+.poppy{
+  .gmap-popup{
+    .views-field-view-node{
+      a{
+	color:#f00;
+      }
+    }
+  }
+}
+.home{
+  #block-views-business-map-block-1{
+    float:left;
+    width:33%;
+  }
+}
+.view-header{
+  p{
+    margin:0;
+  }
+}
+#top-wrap{
+  border-bottom: thin solid #E0C89E;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+#top-wrap,#left-wrap,#middle-wrap{
+  h3{
+    margin-bottom:0;
+    margin-top:0;
+  }
+  p{
+    margin:0;
+    strong{
+      font-weight:normal;
+      font-size:18px;
+    }
+  }
+}
+#middle-wrap{
+  width:300px;
+  margin:0 auto 40px auto;
+}
+#banner-verify{
+  position:absolute;
+  top:77px;
+  left:0;
+  z-index:99;
+  display:none;
+}
+.callout.bottom{
+  margin:15px 0 0 0;
+}
+.views-field-field-ad-image{
+  text-align:center;
+}
+.views-field-field-callout-box-bottom-images{
+  margin:5px 0;
+  text-align:center;
+  img{
+    -webkit-box-shadow: 3px 3px 3px -3px rgba(74,66,74,.5);
+    -moz-box-shadow: 3px 3px 3px -3px rgba(74,66,74,.5);
+    box-shadow: 3px 3px 3px -3px rgba(74,66,74,.5);
+  }
+}
+
+@media all and (min-width: 956px)  {
+  #banner-verify{
+    display:block;
+  }
+  .field-name-field-callout-box-top,
+  .field-name-field-callout-box-bottom{
+    width:300px;
+    float:left;
+    display:block
+  }
+  #content-wrap{
+    float:left;
+    width:75%;
+    .page-taxonomy-term-276 & {
+      width:100%;
+    }
+  }
+  .callout.bottom{
+    padding:5px 5px 0 5px;;
+    border:solid 1px #e0c89e;
+  }
+  .custom-div{
+    width:46%;
+    float:left;
+    &#left-wrap{
+      border-right:dashed 1px #E0C89E;
+      padding-right:15px;
+      margin-right:15px;
+    }
+    &#left-wrap.no-line{
+      border-right:none;
+    }
+  }
+  #right-wrap{
+    border-left:dashed 1px #E0C89E;
+    padding-left:15px;
+    margin-left:15px;
+    width:20%;
+    float:left;
+    .page-taxonomy-term-276 & {
+      width:100%;
+      border-left:0;
+      padding-left:0;
+      margin-left:0;
+    }
+  }
+}
+#right-wrap {
+  a{
+    margin:10px;
+    display:inline-block;
+  }
+}
+
+
+@media all and (max-width: 500px)  {
+  #middle-wrap{
+    width:300px;
+    margin:0 0 40px 0;
+  }
+}

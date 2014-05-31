@@ -1,0 +1,13 @@
+<?php
+
+function fbt_custom_block_view_alter(&$data, $block) {
+  if ($block->delta == 'home_body') {
+    $data['subject'] = '';
+  }
+  if ($block->delta == 'tag_body') {
+    $data['subject'] = '';
+  }
+  if ($block->delta == 'prof_art') {
+    $data['subject'] = '';
+  }
+}
