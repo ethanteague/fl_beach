@@ -13,7 +13,7 @@ if (!empty($node->body[LANGUAGE_NONE][0]['value'])) {
 print '<div id="left-wrap">';
 
 if (!empty($node->field_on_the_beach_verification[LANGUAGE_NONE][0]['value']) && $node->field_on_the_beach_verification[LANGUAGE_NONE][0]['value'] == 'Yes') {
-  print '<div id="on-beach-wrap"><img src="/'.path_to_theme().'/images/theme/beach_yes.png" />';
+  print '<div id="on-beach-wrap"><img src="/'.path_to_theme().'/images/theme/beach_yes.png" /><img src="/'.path_to_theme().'/images/theme/sandals.jpg" />';
   if(!empty($node->field_on_the_beach_location_deta[LANGUAGE_NONE][0]['value'])){
     print '<div>'.$node->field_on_the_beach_location_deta[LANGUAGE_NONE][0]['value'].'</div>';
   }
@@ -72,8 +72,19 @@ if (!empty($map_dl_view['content']['#markup'])){
   print '<div id="map-dl-wrap"><h3>Beach Trails Map</h3>'.$map_dl_view['content']['#markup'].'</div>';
 }
 
+
+$callout_view = module_invoke('views', 'block_view', 'related_content-block_1');
+if (!empty($callout_view['content']['#markup'])) {
+    print $callout_view['content']['#markup'];
+}
+
 print '</div>';
 $map_view = module_invoke('views', 'block_view', 'article_profile_map_2-block');
-if (!empty($map_view['content']['#markup'])){
-  print '<div id="map-wrap"><h3>In this Area</h3>'.$map_view['content']['#markup'].'</div>';
+$callout_view_two = module_invoke('views', 'block_view', 'related_content-block_2');
+if (!empty($map_view['content']['#markup']) || !empty($callout_view_two['content']['#markup'])){
+  print '<div id="map-wrap"><div id="related-map">
+<h3>In this Area</h3>'.$map_view['content']['#markup'].'</div>
+<div id="related-box">'.$callout_view_two['content']['#markup'].'</div></div>';
 }
+
+

@@ -20,18 +20,25 @@ h5{
     text-align:center;
 }
 
+#on-beach-wrap img {
+  float:left;
+  margin:5px;
+}
 .page-taxonomy-term-276 #map-wrap {
+  clear:both;
+}
+#all-footer {
   clear:both;
 }
 
 .view-display-id-block_1 {
-  text-align:center;
     .views-row {
-      margin:10px;
       display:inline-block;
     }
   }
-
+.view-display-id-block_2 .view-header {
+  margin-top:10px;
+}
 @media all and (min-width: 956px)  {
   .view-display-id-block_1 {
     .views-row {
