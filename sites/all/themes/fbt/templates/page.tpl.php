@@ -35,7 +35,7 @@ print '<a target="_blank" href="http://www.facebook.com/FloridaBeachTrails"><img
   <div id="banner-verify">
 <?php
   if(drupal_is_front_page()){
-    print '<a href="content/beach-verified"><img src="'.path_to_theme().'/images/theme/obv_banner.png" /></a>';
+    print '<a href="content/beach-verified"><img src="/'.path_to_theme().'/images/theme/obv_banner.png" /></a>';
   }
 ?>
 </div>

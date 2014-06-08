@@ -11,14 +11,12 @@ if (!empty($node->body[LANGUAGE_NONE][0]['value'])) {
 }
 
 print '<div id="left-wrap">';
-
-if (!empty($node->field_on_the_beach_verification[LANGUAGE_NONE][0]['value']) && $node->field_on_the_beach_verification[LANGUAGE_NONE][0]['value'] == 'Yes') {
-  print '<div id="on-beach-wrap"><img src="/'.path_to_theme().'/images/theme/beach_yes.png" /><img src="/'.path_to_theme().'/images/theme/sandals.jpg" /><div style="clear:both"></div>';
-  if(!empty($node->field_on_the_beach_location_deta[LANGUAGE_NONE][0]['value'])){
-    print '<div>'.$node->field_on_the_beach_location_deta[LANGUAGE_NONE][0]['value'].'</div>';
-  }
-  print '</div>';
+if (!empty($node->field_verified_image[LANGUAGE_NONE][0]['uri'])) {
+    foreach ($node->field_verified_image[LANGUAGE_NONE] as $field_verified_image) {
+        print theme('image_style', array('path' => $field_verified_image['uri'], 'style_name' => 'callout_box_image')).'<br />';
+    }
 }
+
 
 $event_view = module_invoke('views', 'block_view', 'events-block');
 if (!empty($event_view['content']['#markup'])){
