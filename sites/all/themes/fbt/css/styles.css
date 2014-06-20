@@ -1007,6 +1007,8 @@ h5 { font-size: 18px; line-height: 22px; margin: 0; }
   /* line 23, ../sass/_art_prof.scss */
   .art_prof #left-wrap { float: left; width: 50%; padding-right: 10px; margin-right: 10px; border-right: 1px dashed #E0C89E; } }
 
+#map-wrap .views-field.views-field-body p { margin:0; }
+
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
