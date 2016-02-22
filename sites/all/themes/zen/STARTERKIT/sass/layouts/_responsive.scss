@@ -13,7 +13,7 @@
 $zen-column-count:  1;
 $zen-gutter-width:  20px;
 
-// If you need IE6/7 support for box-sizing: border-box (default), see _base.scss
+// If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
 //$zen-box-sizing: content-box;
 
 // You can generate more efficient CSS if you manually apply the
@@ -21,7 +21,8 @@ $zen-gutter-width:  20px;
 $zen-auto-include-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
-// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+// Suppress this section of CSS for RTL layouts since it contains no CSS that
+// needs RTL-specific overrides.
 @if $zen-reverse-all-floats == false {
 
 /**
@@ -71,7 +72,7 @@ $zen-auto-include-item-base: false;
   }
 }
 
-} // End of @if $zen-reverse-all-floats == true
+} // End of @if $zen-reverse-all-floats == false
 
 /**
  * Use 3 grid columns for smaller screens.

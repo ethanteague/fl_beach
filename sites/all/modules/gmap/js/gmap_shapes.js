@@ -58,6 +58,8 @@
 
                 case 'polygon':
                     fillstyle = true;
+                    break;
+
                 case 'line':
                     if (shape.points) {
                         $.each(shape.points, function (i, n) {
@@ -71,6 +73,8 @@
 
                 case 'encoded_polygon':
                     fillstyle = true;
+                    break;
+
                 case 'encoded_line':
                     pa = ( google.maps.geometry ) ? google.maps.geometry.encoding.decodePath(shape.path) : []; // this trinary prevents errors if the google.maps gemoetry library wasn't loaded
                     break;
@@ -98,7 +102,7 @@
                     style[4] = style[4] / 100; // fill opacity
                 }
 
-                if (shape.type == 'encoded_line') {
+                if (shape.type == 'encoded_line' || shape.type == 'line') {
                     shape.color = style[0];
                     shape.weight = style[1];
                     shape.opacity = style[2];
@@ -115,6 +119,13 @@
                     shape.color = style[3];
                     shape.opacity = style[4];
                     shape.outline = true;
+                }
+                else if (shape.type == 'polygon') {
+                  shape.strokeColor = style[0];
+                  shape.strokeWeight = style[1];
+                  shape.strokeOpacity = style[2];
+                  shape.fillColor = style[3];
+                  shape.fillOpacity = style[4];
                 }
             }
 
@@ -151,7 +162,6 @@
                     break;
                 case 'rpolygon':
                 case 'encoded_polygon':
-                case 'polygon':
                     cargs = { path: pa }; // required args
                     if (shape.outline) {
                         cargs.strokeColor = shape.color;
@@ -168,6 +178,26 @@
                     }
                     shape.shape = new google.maps.Polygon(cargs);
                     break;
+                case 'polygon':
+                    cargs = { path: pa };
+                    if (shape.strokeColor) {
+                      cargs.strokeColor = shape.strokeColor;
+                    }
+                    if (shape.strokeWeight) {
+                      cargs.strokeWeight = shape.strokeWeight;
+                    }
+                    if (shape.strokeOpacity) {
+                      cargs.strokeOpacity = shape.strokeOpacity;
+                    }
+                    if (shape.fillColor) {
+                      cargs.fillColor = shape.fillColor;
+                    }
+                    if (shape.fillOpacity) {
+                      cargs.fillOpacity = shape.fillOpacity;
+                    }
+                    shape.shape = new google.maps.Polygon(cargs);
+                    break;
+
                 case 'line':
                 case 'encoded_line':
                     cargs = { path: pa }; // required args
