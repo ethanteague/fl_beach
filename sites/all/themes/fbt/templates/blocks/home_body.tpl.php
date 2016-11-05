@@ -4,7 +4,7 @@ $nid = node_load(arg(1));
    ?>
 <div id="content-wrap">
   <div id="top-wrap">
-    <?
+    <?php
        print $nid->body[LANGUAGE_NONE][0]['safe_value'];
     ?>
   </div>
@@ -16,7 +16,7 @@ $nid = node_load(arg(1));
       ?>
     </div>
     <div class="callout bottom">
-      <h3><span class="red">Hot</span> New FREE Item!</h3>
+      <h3>New products in stock!</h3>
       <?php
   print $nid->field_callout_box_bottom[LANGUAGE_NONE][0]['safe_value'];
        $callout_view = module_invoke('views', 'block_view', 'callout_block_images-block');
