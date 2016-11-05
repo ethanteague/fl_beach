@@ -40,11 +40,11 @@ Drupal.gmap.getIcon = function (setname, sequence) {
 
     if (!this.gicons[setname]) {
         if (!Drupal.gmap.icons[setname]) {
-            alert('Request for invalid marker set ' + setname + '!');
+            //alert('Request for invalid marker set ' + setname + '!');
         }
         this.gicons[setname] = [];
         this.gshadows[setname] = [];
-        var q = Drupal.gmap.icons[setname];
+        var q = Drupal.gmap.icons['blue'];
         var p, t;
         for (var i = 0; i < q.sequence.length; i++) {
             /*

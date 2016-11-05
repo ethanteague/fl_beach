@@ -20,7 +20,7 @@
       Locally researched and approved vacation spots.
     </div>
     <div id="at-right">
-      <a href="/featured-sponsors">Featured Sponsors</a> |
+      <a href="/store">Store</a> |
       <a href="/blog">Blog</a> |
       <a href="/contact">Contact Us</a>
       <div id="top-socials">

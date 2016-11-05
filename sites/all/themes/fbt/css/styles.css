@@ -939,7 +939,7 @@ h3 { margin: 0; }
   /* line 100, ../sass/_homepage.scss */
   .custom-div#left-wrap.no-line { border-right: none; }
   /* line 104, ../sass/_homepage.scss */
-  #right-wrap { border-left: dashed 1px #E0C89E; padding-left: 15px; margin-left: 15px; width: 20%; float: left; }
+  #right-wrap { border-left: dashed 1px #E0C89E; padding-left: 15px; margin-left: 15px; width: 15%; float: right; }
   /* line 110, ../sass/_homepage.scss */
   .page-taxonomy-term-276 #right-wrap { width: 100%; border-left: 0; padding-left: 0; margin-left: 0; } }
 /* line 119, ../sass/_homepage.scss */
