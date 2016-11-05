@@ -39,8 +39,7 @@
   <div id="banner-verify">
     <?php
     if (drupal_is_front_page()) : ?>
-      <a href="content/beach-verified"><img
-          src="/' . path_to_theme() . '/images/theme/obv_banner.png"/></a>
+      <?php print '<a href="content/beach-verified"><img src="/' . path_to_theme() . '/images/theme/obv_banner.png"/></a>'; ?>
     <?php endif; ?>
   </div>
   <div id="navigation">

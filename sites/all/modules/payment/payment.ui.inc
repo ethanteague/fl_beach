@@ -121,8 +121,7 @@ function payment_form_embedded_validate(array $element, array &$form_state, arra
   if (empty($form_state['rebuild']) && $payment->method) {
     try {
       $payment->method->validate($payment);
-    }
-    catch (PaymentValidationException $e) {
+    } catch (PaymentValidationException $e) {
       form_set_error('payment_method', $e->getMessage());
     }
   }
@@ -377,7 +376,7 @@ function payment_form_payment_method(array $form, array &$form_state, PaymentMet
     '#title' => t('Owner'),
     '#default_value' => $payment_method->uid ? user_load($payment_method->uid)->name : $user->name,
     '#maxlength' => 255,
-    '#autocomplete_path' => 'user/autocomplete', 
+    '#autocomplete_path' => 'user/autocomplete',
     '#required' => TRUE,
   );
   $form['controller_form'] = array(
@@ -485,9 +484,12 @@ function _payment_page_status_level(array $hierarchy, $depth) {
   $rows = array();
   foreach ($hierarchy as $status => $children) {
     $status_info = payment_status_info($status);
-    $rows[] = array(theme('indentation', array(
-    'size' => $depth,
-  )) . $status_info->title, $status_info->description);
+    $rows[] = array(
+      theme('indentation', array(
+        'size' => $depth,
+      )) . $status_info->title,
+      $status_info->description,
+    );
     $rows = array_merge($rows, _payment_page_status_level($children, $depth + 1));
   }
 
@@ -510,10 +512,12 @@ function _payment_page_status_level(array $hierarchy, $depth) {
  */
 function _payment_page_status_rows(array $statuses, array $children, array &$rows, $depth = 0) {
   foreach ($statuses as $status) {
-    $rows[] = array(theme('payment_page_status_row', array(
-      'status' => $status,
-      'depth' => $depth,
-    )));
+    $rows[] = array(
+      theme('payment_page_status_row', array(
+        'status' => $status,
+        'depth' => $depth,
+      )),
+    );
     if (isset($children[$status])) {
       _payment_page_status_rows($children[$status], $children, $rows, $depth + 1);
     }
@@ -529,7 +533,7 @@ function payment_payment_status_sort_title(PaymentStatusInfo $status_a, PaymentS
 
 function payment_method_name_exists($name) {
   return !is_a(entity_load_single('payment_method', $name), 'PaymentMethodUnavailable');
-  
+
 }
 
 /**
@@ -546,8 +550,8 @@ function payment_line_items(Payment $payment) {
       'data' => array(
         t($line_item->description, $line_item->description_arguments),
         $line_item->quantity,
-        payment_amount_human_readable($line_item->unitAmount(TRUE), $payment->currency_code),
-        payment_amount_human_readable($line_item->totalAmount(TRUE), $payment->currency_code),
+        payment_amount_human_readable(round($line_item->unitAmount(TRUE), 2), $payment->currency_code),
+        payment_amount_human_readable(round($line_item->totalAmount(TRUE), 2), $payment->currency_code),
         t('!amount (!percentage%)', array(
           '!amount' => payment_amount_human_readable($line_item->amount * $line_item->tax_rate, $payment->currency_code),
           '!percentage' => $line_item->tax_rate * 100,
@@ -557,17 +561,26 @@ function payment_line_items(Payment $payment) {
     );
   }
   $rows[] = array(
-    'data' => array(array(
-      'data' => t('Total amount'),
-      'colspan' => 3,
-      ), payment_amount_human_readable($payment->totalAmount(TRUE), $payment->currency_code), '',
+    'data' => array(
+      array(
+        'data' => t('Total amount'),
+        'colspan' => 3,
+      ),
+      payment_amount_human_readable(round($payment->totalAmount(TRUE), 2), $payment->currency_code),
+      '',
     ),
     'class' => array('payment-line_item-total'),
   );
   $build = array(
     '#type' => 'markup',
     '#markup' => theme('table', array(
-      'header' => array(t('Description'), t('Quantity'), t('Amount'), t('Total'), t('Tax')),
+      'header' => array(
+        t('Description'),
+        t('Quantity'),
+        t('Amount'),
+        t('Total'),
+        t('Tax'),
+      ),
       'rows' => $rows,
     )),
   );
@@ -697,7 +710,8 @@ function payment_form_process_amount_validate(array $element, array &$form_state
     \d+?  # One or more digits.
     [.,]? # One period or comma as optional decimal separator.
     \d*   # Zero or more decimals.
-    $/x', $value)) {
+    $/x', $value)
+  ) {
     form_error($element, t('The amount can only consist of digits, optionally preceded by a minus sign and optionally preceded, separated or succeeded by a decimal separator.'));
   }
   else {
@@ -751,7 +765,10 @@ function payment_form_process_line_item(array $element, array &$form_state, arra
     $element['container_' . $delta] = array(
       '#type' => 'container',
       '#attributes' => array(
-        'class' => array('payment-line-item-container payment-line-item-container-' . $delta, ($delta + 1) % 2 == 0 ? 'odd' : 'even'),
+        'class' => array(
+          'payment-line-item-container payment-line-item-container-' . $delta,
+          ($delta + 1) % 2 == 0 ? 'odd' : 'even',
+        ),
       ),
     );
     $element['container_' . $delta]['amount'] = array(
@@ -791,7 +808,10 @@ function payment_form_process_line_item(array $element, array &$form_state, arra
       '#default_value' => $line_item ? $line_item->name : '',
       '#maxlength' => 255,
       '#machine_name' => array(
-        'source' => array_merge($element['#parents'], array('container_' . $delta, 'description')),
+        'source' => array_merge($element['#parents'], array(
+          'container_' . $delta,
+          'description',
+        )),
         'exists' => 'payment_method_name_exists',
       ),
       '#required' => $required,
@@ -984,7 +1004,7 @@ function payment_form_process_method(array $element, array &$form_state, array &
         '#submit' => array('payment_form_process_method_submit'),
         '#limit_validation_errors' => array(),
         '#attributes' => array(
-          'class' => array('js-hide')
+          'class' => array('js-hide'),
         ),
       );
       $element['payment_method_controller_payment_configuration'] = array(
