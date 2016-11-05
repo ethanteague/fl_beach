@@ -197,7 +197,7 @@
 
   <div id="bottom-page">
     <a class="reg" href="user/register">REGISTER YOUR BUSINESS ON FLORIDA BEACH
-      TRAILS!</a> | ©Florida Beach Trails 2012
+      TRAILS!</a> | ©Florida Beach Trails <?php print DATE('Y'); ?>
   </div>
 </div>
 
