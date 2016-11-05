@@ -1,7 +1,7 @@
 <?php
 $term = is_numeric(arg(2)) ? taxonomy_term_load(arg(2)) : '';
 ?>
-<div id="content-wrap">
+<div id="content-wrap all">
   <div id="top-wrap">
     <?php
     print !empty($term->description) ? $term->description : '';
