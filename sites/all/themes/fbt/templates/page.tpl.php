@@ -80,7 +80,7 @@
     </div>
     <?php print render($page['highlighted']); ?>
   </div>
-<? endif; ?>
+<?php endif; ?>
 <div id="page-wrap">
   <div id="page">
 
@@ -101,7 +101,6 @@
                  id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div>
-      <?php endif; ?>
       <?php endif; ?>
       <?php if ($secondary_menu): ?>
         <nav class="header__secondary-menu" id="secondary-menu"
