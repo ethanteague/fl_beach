@@ -642,7 +642,7 @@ tr.selected td { background: #ffc; }
   #skip-link, #toolbar, #navigation, .region-sidebar-first, .region-sidebar-second, #footer, .breadcrumb, .tabs, .action-links, .links, .book-navigation, .forum-topic-navigation, .pager, .feed-icons { visibility: hidden; display: none; } }
 /* General Theme */
 /* line 18, ../sass/_fbt_general.scss */
-.btn-blue { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 2em; }
+.btn-blue { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 1em; }
 /* line 9, ../sass/_fbt_general.scss */
 .btn-blue:hover { background: #2383c4; transition: all 0.3s ease; }
 /* line 13, ../sass/_fbt_general.scss */
@@ -797,25 +797,31 @@ h3 { margin: 0; }
 #below-foot-wrap #below-foot .links li.last a { border-right: none; }
 
 /* line 339, ../sass/_fbt_general.scss */
-.section-store h1 { margin-bottom: 15px; }
+.section-store h1, .section-cart h1 { margin-bottom: 15px; }
 /* line 342, ../sass/_fbt_general.scss */
-.section-store .views-row { border-bottom: thin solid #ccc; margin-bottom: 20px; padding-bottom: 20px; }
+.section-store .views-row, .section-cart .views-row { border-bottom: thin solid #ccc; margin-bottom: 20px; padding-bottom: 20px; }
 /* line 346, ../sass/_fbt_general.scss */
-.section-store .views-row img { box-shadow: #727070 0px 1px 3px; }
+.section-store .views-row img, .section-cart .views-row img { box-shadow: #727070 0px 1px 3px; }
 /* line 349, ../sass/_fbt_general.scss */
-.section-store .views-row table { display: inline-table; width: 100%; }
+.section-store .views-row table, .section-cart .views-row table { display: inline-table; width: 100%; }
 /* line 350, ../sass/_fbt_general.scss */
-.section-store .views-row table tr.even, .section-store .views-row table tr.odd { background-color: transparent; font-size: 135%; }
-/* line 357, ../sass/_fbt_general.scss */
-.section-store .views-row p { margin: .5em 0; }
+.section-store .views-row table tr.even, .section-store .views-row table tr.odd, .section-cart .views-row table tr.even, .section-cart .views-row table tr.odd { background-color: transparent; font-size: 135%; border-bottom: thin solid #ccc; margin-bottom: 20px; padding-bottom: 20px; }
 /* line 360, ../sass/_fbt_general.scss */
-.section-store .views-row .form-submit { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 2em; }
+.section-store .views-row p, .section-cart .views-row p { margin: .5em 0; }
+/* line 363, ../sass/_fbt_general.scss */
+.section-store .views-row .form-submit, .section-cart .views-row .form-submit { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 1em; }
 /* line 9, ../sass/_fbt_general.scss */
-.section-store .views-row .form-submit:hover { background: #2383c4; transition: all 0.3s ease; }
+.section-store .views-row .form-submit:hover, .section-cart .views-row .form-submit:hover { background: #2383c4; transition: all 0.3s ease; }
 /* line 13, ../sass/_fbt_general.scss */
-.section-store .views-row .form-submit:active { background: #16527a; }
-/* line 365, ../sass/_fbt_general.scss */
-.section-store h2 { font-size: 115%; }
+.section-store .views-row .form-submit:active, .section-cart .views-row .form-submit:active { background: #16527a; }
+/* line 368, ../sass/_fbt_general.scss */
+.section-store h2, .section-cart h2 { font-size: 115%; }
+/* line 371, ../sass/_fbt_general.scss */
+.section-store .form-submit, .section-store select, .section-cart .form-submit, .section-cart select { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 1em; }
+/* line 9, ../sass/_fbt_general.scss */
+.section-store .form-submit:hover, .section-store select:hover, .section-cart .form-submit:hover, .section-cart select:hover { background: #2383c4; transition: all 0.3s ease; }
+/* line 13, ../sass/_fbt_general.scss */
+.section-store .form-submit:active, .section-store select:active, .section-cart .form-submit:active, .section-cart select:active { background: #16527a; }
 
 /* Widescreen theme */
 @media all and (min-width: 956px) { /* line 2, ../sass/_fbt_wide.scss */

@@ -5,7 +5,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   font-family: Tahoma;
-  font-size: 2em;
+  font-size: 1em;
   &:hover {
     background: darken($bg, 8%);
     transition: all 0.3s ease;
@@ -152,15 +152,15 @@ textarea {
     }
     @media (max-width: 955px) {
       #at-left {
-        display:none;
+        display: none;
       }
       #at-right {
-        float:none;
+        float: none;
         position: absolute;
         z-index: 9;
         font-size: 80%;
         #top-socials {
-          display:none;
+          display: none;
         }
       }
     }
@@ -335,7 +335,7 @@ h3 {
   }
 }
 
-.section-store {
+.section-store, .section-cart {
   h1 {
     margin-bottom: 15px;
   }
@@ -350,6 +350,9 @@ h3 {
       tr.even, tr.odd {
         background-color: transparent;
         font-size: 135%;
+        border-bottom: thin solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
       }
       display: inline-table;
       width: 100%
@@ -365,6 +368,8 @@ h3 {
   h2 {
     font-size: 115%;
   }
+  .form-submit, select {
+    @include button-bg(#3498db);
+  }
+
 }
-
-
