@@ -703,112 +703,118 @@ textarea { border: thin solid #E0C89E; min-height: 250px; }
 /* line 128, ../sass/_fbt_general.scss */
 #above-top { background: url('../images/theme/secondarynav_bg.png?1478296540') repeat-x top; width: 100%; height: 29px; }
 /* line 132, ../sass/_fbt_general.scss */
-#above-top #at-wrap { display: none; max-width: 960px; margin: 0 auto; color: #fff; font-size: 14px; padding-top: 3px; }
-/* line 139, ../sass/_fbt_general.scss */
+#above-top #at-wrap { max-width: 960px; margin: 0 auto; color: #fff; font-size: 14px; padding-top: 3px; }
+/* line 138, ../sass/_fbt_general.scss */
 #above-top #at-wrap #at-left { font-style: italic; float: left; width: 50%; }
-/* line 144, ../sass/_fbt_general.scss */
+/* line 143, ../sass/_fbt_general.scss */
 #above-top #at-wrap #at-right { float: right; width: 36%; position: relative; }
-/* line 148, ../sass/_fbt_general.scss */
+/* line 147, ../sass/_fbt_general.scss */
 #above-top #at-wrap #at-right #top-socials { position: absolute; right: 0; top: 0; }
-/* line 154, ../sass/_fbt_general.scss */
+@media (max-width: 955px) { /* line 154, ../sass/_fbt_general.scss */
+  #above-top #at-wrap #at-left { display: none; }
+  /* line 157, ../sass/_fbt_general.scss */
+  #above-top #at-wrap #at-right { float: none; position: absolute; z-index: 9; font-size: 80%; }
+  /* line 162, ../sass/_fbt_general.scss */
+  #above-top #at-wrap #at-right #top-socials { display: none; } }
+/* line 167, ../sass/_fbt_general.scss */
 #above-top #at-wrap a { color: #fff; margin: 0 3px; }
-/* line 157, ../sass/_fbt_general.scss */
+/* line 170, ../sass/_fbt_general.scss */
 #above-top #at-wrap a:hover { text-decoration: underline; }
 
-/* line 164, ../sass/_fbt_general.scss */
+/* line 177, ../sass/_fbt_general.scss */
 .red { color: #f00; }
 
-/* line 168, ../sass/_fbt_general.scss */
+/* line 181, ../sass/_fbt_general.scss */
 a.reg { color: #fff; }
-/* line 170, ../sass/_fbt_general.scss */
+/* line 183, ../sass/_fbt_general.scss */
 a.reg:hover { text-decoration: underline; }
 
-/* line 175, ../sass/_fbt_general.scss */
+/* line 188, ../sass/_fbt_general.scss */
 #top { width: 100%; height: 310px; position: relative; }
-/* line 179, ../sass/_fbt_general.scss */
+/* line 192, ../sass/_fbt_general.scss */
 #top #navigation { padding-left: 0; padding-right: 0; }
-/* line 183, ../sass/_fbt_general.scss */
+/* line 196, ../sass/_fbt_general.scss */
 #top nav#main-menu { position: relative; z-index: 3; max-width: 960px; margin: 0 auto; font-family: "Roboto", sans-serif; }
-/* line 189, ../sass/_fbt_general.scss */
-#top nav#main-menu li { background: url('../images/theme/nav_bg.jpg?1478296540') repeat-x top; padding: 7px 0; display: block; float: none; }
-/* line 194, ../sass/_fbt_general.scss */
-#top nav#main-menu li:hover a span { color: #f8e971; }
-/* line 197, ../sass/_fbt_general.scss */
-#top nav#main-menu li.menu-546 { display: none; }
 /* line 202, ../sass/_fbt_general.scss */
+#top nav#main-menu li { background: url('../images/theme/nav_bg.jpg?1478296540') repeat-x top; padding: 7px 0; display: block; float: none; }
+/* line 207, ../sass/_fbt_general.scss */
+#top nav#main-menu li:hover a span { color: #f8e971; }
+/* line 210, ../sass/_fbt_general.scss */
+#top nav#main-menu li.menu-546 { display: none; }
+/* line 215, ../sass/_fbt_general.scss */
 #top nav#main-menu a span { display: block; }
-/* line 204, ../sass/_fbt_general.scss */
+/* line 217, ../sass/_fbt_general.scss */
 #top nav#main-menu a span.white-menu { font-size: 16px; color: #fff; }
-/* line 208, ../sass/_fbt_general.scss */
+/* line 221, ../sass/_fbt_general.scss */
 #top nav#main-menu a span.yellow-menu { font-size: 28px; color: #fff9ca; font-weight: bold; }
 
-/* line 222, ../sass/_fbt_general.scss */
+/* line 235, ../sass/_fbt_general.scss */
 .ie9 #top nav#main-menu li { width: 80px; height: 40px; }
-/* line 225, ../sass/_fbt_general.scss */
+/* line 238, ../sass/_fbt_general.scss */
 .ie9 #top nav#main-menu li.menu-382 { width: 95px; margin-left: 275px; }
-/* line 229, ../sass/_fbt_general.scss */
+/* line 242, ../sass/_fbt_general.scss */
 .ie9 #top nav#main-menu li a { font-size: 17px; color: #fff9ca; font-weight: bold; }
-/* line 233, ../sass/_fbt_general.scss */
+/* line 246, ../sass/_fbt_general.scss */
 .ie9 #top nav#main-menu li a:hover { color: #f8e971; }
 
-/* line 242, ../sass/_fbt_general.scss */
+/* line 255, ../sass/_fbt_general.scss */
 .view-article-and-profile-images { margin: 0 15px 10px 0; }
 
-/* line 248, ../sass/_fbt_general.scss */
+/* line 261, ../sass/_fbt_general.scss */
 .field-name-field-key-features .field-items { font-style: italic; }
 
-/* line 252, ../sass/_fbt_general.scss */
+/* line 265, ../sass/_fbt_general.scss */
 .view-beach-photo-gallery td { display: block; }
 
-/* line 259, ../sass/_fbt_general.scss */
+/* line 272, ../sass/_fbt_general.scss */
 h3 { margin: 0; }
 
-/* line 265, ../sass/_fbt_general.scss */
+/* line 278, ../sass/_fbt_general.scss */
 #wood { background: url('../images/theme/wood.jpg?1478296540') repeat-x top; width: 100%; height: 17px; }
 
-/* line 271, ../sass/_fbt_general.scss */
+/* line 284, ../sass/_fbt_general.scss */
 #bottom-page-wrap { background: #0176a1; width: 100%; }
-/* line 274, ../sass/_fbt_general.scss */
+/* line 287, ../sass/_fbt_general.scss */
 #bottom-page-wrap #bottom-page { text-align: center; margin: 0 auto; color: #fff; padding: 5px 0; }
 
-/* line 282, ../sass/_fbt_general.scss */
+/* line 295, ../sass/_fbt_general.scss */
 #below-foot-wrap { width: 100%; background: #f5efe3 url('../images/theme/sand_foot.jpg?1478296540') repeat-x bottom; padding: 30px 0 1px 0; }
-/* line 286, ../sass/_fbt_general.scss */
+/* line 299, ../sass/_fbt_general.scss */
 #below-foot-wrap #divider { border-top: thin solid #e0c89e; }
-/* line 289, ../sass/_fbt_general.scss */
+/* line 302, ../sass/_fbt_general.scss */
 #below-foot-wrap #below-foot { margin: 0 auto; position: relative; max-width: 960px; text-align: center; }
-/* line 294, ../sass/_fbt_general.scss */
+/* line 307, ../sass/_fbt_general.scss */
 #below-foot-wrap #below-foot #foot-socials { text-align: center; }
-/* line 296, ../sass/_fbt_general.scss */
+/* line 309, ../sass/_fbt_general.scss */
 #below-foot-wrap #below-foot #foot-socials #be-social { display: none; position: relative; top: -18px; }
-/* line 303, ../sass/_fbt_general.scss */
-#below-foot-wrap #below-foot .links li { display: inline; list-style: none; }
-/* line 306, ../sass/_fbt_general.scss */
-#below-foot-wrap #below-foot .links li a { color: #0176a1; border-right: 1px solid #E0C89E; padding-right: 5px; }
-/* line 310, ../sass/_fbt_general.scss */
-#below-foot-wrap #below-foot .links li a:hover { text-decoration: underline; }
 /* line 316, ../sass/_fbt_general.scss */
+#below-foot-wrap #below-foot .links li { display: inline; list-style: none; }
+/* line 319, ../sass/_fbt_general.scss */
+#below-foot-wrap #below-foot .links li a { color: #0176a1; border-right: 1px solid #E0C89E; padding-right: 5px; }
+/* line 323, ../sass/_fbt_general.scss */
+#below-foot-wrap #below-foot .links li a:hover { text-decoration: underline; }
+/* line 329, ../sass/_fbt_general.scss */
 #below-foot-wrap #below-foot .links li.last a { border-right: none; }
 
-/* line 326, ../sass/_fbt_general.scss */
+/* line 339, ../sass/_fbt_general.scss */
 .section-store h1 { margin-bottom: 15px; }
-/* line 329, ../sass/_fbt_general.scss */
+/* line 342, ../sass/_fbt_general.scss */
 .section-store .views-row { border-bottom: thin solid #ccc; margin-bottom: 20px; padding-bottom: 20px; }
-/* line 333, ../sass/_fbt_general.scss */
+/* line 346, ../sass/_fbt_general.scss */
 .section-store .views-row img { box-shadow: #727070 0px 1px 3px; }
-/* line 336, ../sass/_fbt_general.scss */
+/* line 349, ../sass/_fbt_general.scss */
 .section-store .views-row table { display: inline-table; width: 100%; }
-/* line 337, ../sass/_fbt_general.scss */
+/* line 350, ../sass/_fbt_general.scss */
 .section-store .views-row table tr.even, .section-store .views-row table tr.odd { background-color: transparent; font-size: 135%; }
-/* line 344, ../sass/_fbt_general.scss */
+/* line 357, ../sass/_fbt_general.scss */
 .section-store .views-row p { margin: .5em 0; }
-/* line 347, ../sass/_fbt_general.scss */
+/* line 360, ../sass/_fbt_general.scss */
 .section-store .views-row .form-submit { background: #3498db; color: white; text-decoration: none; padding: 5px 10px; border-radius: 5px; font-family: Tahoma; font-size: 2em; }
 /* line 9, ../sass/_fbt_general.scss */
 .section-store .views-row .form-submit:hover { background: #2383c4; transition: all 0.3s ease; }
 /* line 13, ../sass/_fbt_general.scss */
 .section-store .views-row .form-submit:active { background: #16527a; }
-/* line 352, ../sass/_fbt_general.scss */
+/* line 365, ../sass/_fbt_general.scss */
 .section-store h2 { font-size: 115%; }
 
 /* Widescreen theme */
