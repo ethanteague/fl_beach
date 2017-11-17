@@ -10,7 +10,7 @@ $nid = node_load(arg(1));
   </div>
   <div id="left-wrap" class="custom-div">
     <div class="callout">
-      <h3>On the Beach Verified</h3>
+      <h3>Online Product Store</h3>
       <?php
 	 print $nid->field_callout_box_top[LANGUAGE_NONE][0]['safe_value'];
       ?>
